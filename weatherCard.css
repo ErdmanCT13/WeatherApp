@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap');
+
+.weather-card-container{
+    height: fit-content;
+    width: 100%;
+    /* overflow: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: hsl(0, 0%, 97%);
+}
+.weather-card-daily{
+    transition: transform .2s ease, opacity .5s ease; 
+    opacity: 0;
+    transform: translateY(200px);
+    height: 350px;
+    width: calc(100%);
+    max-width: 850px;
+    background: #833ab4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: white;
+    /* border-radius: 3px; */
+    /* margin-top: 8px; */
+    border-width: 0px 1px 1px 1px;
+    border-style: solid;
+    border-color: hsl(0, 0%, 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    position: relative;
+    bottom: 50px;
+
+    /* margin-bottom: 10px; */
+    /* border-radius: 3px; */
+}
+.weather-card-daily:nth-child(even){
+    background: hsl(170, 100%, 100%);
+    background: white;
+}
+.weather-card-daily--evening > .weather-card-daily__temp::after{
+    content: "";
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+    background: black;
+    -webkit-mask: url("./images/moon.svg") no-repeat center;
+    -webkit-mask-size: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-card-daily--daytime > .weather-card-daily__temp::after{
+    content: "";
+    height: 50px;
+    width: 50px;
+    margin-left: 30px;
+    background: black;
+    -webkit-mask: url("./images/sun.svg") no-repeat center;
+    -webkit-mask-size: 50px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather-card-daily__temp{
+    height: fit-content;
+    width: 50%;
+    min-width: 200px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: hsl(0, 0%, 90%);
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    padding-bottom: 30px;
+}
+.weather-card-daily__name{
+    height: 25px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    background: hsl(35, 97%, 63%);
+    color: hsl(35, 97%, 96%);
+    border-radius: 5px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 15px;
+
+}
+.weather-card-daily__description{
+    font-size: 11px;
+    margin-top: 40px;
+    padding: 0 60px;
+    box-sizing: border-box;
+}
+.fog{
+
+}
+.rain{
+
+}
+.sunny{
+
+}
+.cloudy{
+
+}
+.ice{
+
+}
+.windy{
+
+}
+
+
+
